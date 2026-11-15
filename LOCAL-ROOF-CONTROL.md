@@ -25,8 +25,8 @@ require the explicit `--yes` flag as a safety interlock.
 | | |
 |---|---|
 | Function | Tuya **TY-WFH V3.01** Wi-Fi sliding-gate/roof controller (drives the roll-off roof motor) |
-| Tuya name | `RollOffRoof` (cloud name), product `WFH`, product_id `q4tn6xb10zncammj` |
-| LAN address | `192.168.1.151`, TCP port **6668** only (MAC `4C:A9:19:*Tuya-Device*`) |
+| Tuya name | `RollOffRoof` (cloud name), product `WFH`, product_id `your-product-id` |
+| LAN address | `192.168.1.x`, TCP port **6668** only (MAC `4C:A9:19:*Tuya-Device*`) |
 | Protocol | **Tuya local protocol v3.5** — `0x00006699` framing, AES-128-**GCM**, session-key handshake |
 | Device ID | `<your-tuya-device-id>` |
 | local_key | in `.env.local` (gitignored) — fetched once from the Tuya cloud |
