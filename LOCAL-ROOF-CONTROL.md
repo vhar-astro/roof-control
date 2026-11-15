@@ -2,12 +2,11 @@
 
 Complete local control of the observatory roll-off roof over Wi-Fi/LAN, with **zero
 calls to the Tuya cloud**. Discovered and validated on **2026-11-15/16**: the roof
-was physically closed and re-opened purely via local TCP, verified on CAM01
-(`192.168.1.104`).
+was physically closed and re-opened purely via local TCP.
 
 ## Quick usage
 
-From `D:\roof-control` (works with the internet completely off):
+From `path-to-roof-control(this-repo)` (works with the internet completely off):
 
 ```bat
 roof status                     :: full DP dump + ROOF: OPEN/CLOSED/MOVING
@@ -27,11 +26,11 @@ require the explicit `--yes` flag as a safety interlock.
 |---|---|
 | Function | Tuya **TY-WFH V3.01** Wi-Fi sliding-gate/roof controller (drives the roll-off roof motor) |
 | Tuya name | `RollOffRoof` (cloud name), product `WFH`, product_id `q4tn6xb10zncammj` |
-| LAN address | `192.168.1.151`, TCP port **6668** only (MAC `4C:A9:19:AC:E2:AB`) |
+| LAN address | `192.168.1.151`, TCP port **6668** only (MAC `4C:A9:19:*Tuya-Device*`) |
 | Protocol | **Tuya local protocol v3.5** — `0x00006699` framing, AES-128-**GCM**, session-key handshake |
-| Device ID | `bfc0ab8e065904940eg1vv` |
+| Device ID | `<your-tuya-device-id>` |
 | local_key | in `.env.local` (gitignored) — fetched once from the Tuya cloud |
-| Config file | `D:\roof-control\.env.local` |
+| Config file | `path-to-roof-control(this-repo)\.env.local` |
 
 ## Data points (TY-WFH V3.01, community-verified + locally confirmed)
 
